@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sustainability Minigame</title>
+        <link rel="stylesheet" href="sustainability.css">
+    </head>
+    
+    <body>
+        <header>
+            <h1 id="title">Sustainability Minigame</h1>
+        </header>
+        
+        <div class="scoreBoard">
+            <div id="scoreLabel">Score</div> 
+            <div id="scoreNum">0</div>
+        </div>
+        
+        <div id="newItem">
+            <img src="Banana.png" alt="">
+        </div>
+
+        <div class="sort">
+            <div class="sortBoard" id="landfill">
+                <img id="landfillImg" src="Landfill.png" alt="" width = "240" height = "400"> 
+                <p>Landfill</p>
+            </div>
+        
+            <div class="sortBoard" id="recycling">
+                <img id="recyclingImg" src="Recycling.png" alt="" width = "240" height = "400">
+                <p>Recycling</p>
+            </div>
+            
+            <div class="sortBoard" id="compost">
+                <img id="compostImg" src="Compost.png" alt="" width = "240" height = "400">
+                <p>Compost</p>
+            </div>
+        </div>
+
+        <div class="results">
+            <h3 id="resultsMessage">You are correct!</h3>
+            <p id="resultsExplain">This is because bananas are a type of food waste. They are biodegradable and should go into the compost bin!</p>
+        </div>
+        
+        <footer class="footer">
+            <p>Made by Grace</p>
+        </footer>
+    
+        <script src="sustainability.js" charset="utf-8"></script>
+    </body>
+</html>
+
