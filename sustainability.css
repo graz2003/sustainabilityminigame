@@ -17,6 +17,10 @@
     text-align: center;
 }
 
+.newItems{
+    text-align: center;
+}
+
 #newItem{
     text-align: center;
     border-radius: 1em;
@@ -50,14 +54,14 @@
     text-align: center;
 }
 
-#resultsMessage{
+.resultsMessage{
     color:azure;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 3em;
     text-align: center;
 }
 
-#resultsExplain{
+.resultsExplain{
     color:azure;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1em;
