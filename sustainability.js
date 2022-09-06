@@ -9,9 +9,14 @@ const displayExplain = document.querySelector(".resultsExplain");
 const choiceLandfill = document.getElementById("landfill");
 const choiceRecycling = document.getElementById("recycling");
 const choiceCompost = document.getElementById("compost");
+const color = ['#284a8c', '#FF0000', '#00FF00'];
+
 
 //Create list with all the images, the correct response and the reason they should be place in a specific bin 
-const itemsList = [["Banana.png", "compost", "This is because bananas are a type of food waste. They are biodegradable and should go into the compost bin!"], ["PlasticBag.jpg", "landfill", "This is because plastic bags are not recyclable or compostable!"], ["TeaBag.jpg", "compost", "This is because tea bags are a type of organics!"], ["AluminiumCan.jpg", "recycling", "This is because aluminium cans can be recycled into other goods!"]];
+const itemsList = [["Banana.png", "compost", "This is because bananas are a type of food waste. They are biodegradable and should go into the compost bin!"], 
+                    ["PlasticBag.jpg", "landfill", "This is because plastic bags are not recyclable or compostable!"], 
+                    ["TeaBag.jpg", "compost", "This is because tea bags are a type of organics!"], 
+                    ["AluminiumCan.jpg", "recycling", "This is because aluminium cans can be recycled into other goods!"]];
 let index = 0;
 
 //Function that gives random number
@@ -29,6 +34,7 @@ function newImage() {
     }
 
     displaynewItem.src = itemsList[index][0];
+  
 }
 
 //function that checks if the user input is the same as the right answer recorded in itemsList
@@ -41,36 +47,47 @@ function checkCorrect(input){
 }
 
 
+
 main();
 
 function main() {
     newImage();
-
+    
     //Event listeners for user response
     choiceLandfill.addEventListener('click', function() {
+        choiceLandfill.classList.remove("apply-shake");
         if (checkCorrect("landfill") == true) {
             score=score+10; //increase score
             displayScore.innerHTML = score; //display score
+            document.querySelector('body').style.background = color[2];
 
             displayResults.innerHTML = correctMessage; //display message
             displayExplain.innerHTML = itemsList[index][2]; //display explaination
             newImage();
         } else {
+            document.querySelector('body').style.background = color[1];
+            
+            choiceLandfill.classList.add("apply-shake");
             displayResults.innerHTML = incorrectMessage; //display message
             displayExplain.innerHTML = itemsList[index][2]; //display explaination
             newImage();
+            
         }
     })
 
     choiceRecycling.addEventListener('click', function(){
+        choiceRecycling.classList.remove("apply-shake");
         if (checkCorrect("recycling") == true) {
             score=score+10; //increase score
             displayScore.innerHTML = score; //display score
+            document.querySelector('body').style.background = color[2];
 
             displayResults.innerHTML = correctMessage; //display message
             displayExplain.innerHTML = itemsList[index][2]; //display explaination
             newImage();
         } else {
+            document.querySelector('body').style.background = color[1];
+            choiceRecycling.classList.add("apply-shake");
             displayResults.innerHTML = incorrectMessage; //display message
             displayExplain.innerHTML = itemsList[index][2]; //display explaination
             newImage();
@@ -78,16 +95,20 @@ function main() {
     })
 
     choiceCompost.addEventListener('click', function(){
+        choiceCompost.classList.remove("apply-shake");
         if (checkCorrect("compost") == true) {
             score=score+10; //increase score
             displayScore.innerHTML = score; //display score
-
+            document.querySelector('body').style.background = color[2];
             displayResults.innerHTML = correctMessage; //display message
             displayExplain.innerHTML = itemsList[index][2]; //display explaination
             newImage();
         } else {
+            document.querySelector('body').style.background = color[1];
+
+            choiceCompost.classList.add("apply-shake");
             displayResults.innerHTML = incorrectMessage; //display message
-            displayExplain.innerHTML = itemsList[index][2]; //display explaination
+            alert(displayExplain.innerHTML = itemsList[index][2]); //display explaination
             newImage();
         }
     })
