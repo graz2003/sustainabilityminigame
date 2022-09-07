@@ -9,7 +9,7 @@ const displayExplain = document.querySelector(".resultsExplain");
 const choiceLandfill = document.getElementById("landfill");
 const choiceRecycling = document.getElementById("recycling");
 const choiceCompost = document.getElementById("compost");
-const color = ['#284a8c', '#FF0000', '#00FF00'];
+const color = ['#284a8c', '#ad3434', '#34ad66'];
 
 
 //Create list with all the images, the correct response and the reason they should be place in a specific bin 
@@ -108,7 +108,7 @@ function main() {
 
             choiceCompost.classList.add("apply-shake");
             displayResults.innerHTML = incorrectMessage; //display message
-            alert(displayExplain.innerHTML = itemsList[index][2]); //display explaination
+            displayExplain.innerHTML = itemsList[index][2]; //display explaination
             newImage();
         }
     })

@@ -48,9 +48,9 @@ body{
 }
 
 #landfillImg:hover{
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #recyclingImg{
@@ -60,9 +60,9 @@ body{
 }
 
 #recyclingImg:hover{
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #compostImg{
@@ -72,9 +72,9 @@ body{
 }
 
 #compostImg:hover{
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -119,6 +119,7 @@ body{
 }
 
 .footer{
-    color: #18305c;
+    color: azure;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-top: 2em;
 }
