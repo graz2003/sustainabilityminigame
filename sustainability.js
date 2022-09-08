@@ -2,6 +2,8 @@
 let score = 0;
 const correctMessage = "You are correct!";
 const incorrectMessage = "You are incorrect!";
+const welcomeMessage = document.getElementById("welcome_popup");
+const welcomeButton = document.getElementById("welcomeButton")
 const displayScore = document.getElementById("scoreNum");
 const displaynewItem = document.getElementById("newItem");
 const displayResults = document.querySelector(".resultsMessage");
@@ -51,8 +53,13 @@ function checkCorrect(input){
 main();
 
 function main() {
-    newImage();
+    //Welcome Pop-up
+    welcomeButton.addEventListener("click", function() {
+        welcomeMessage.innerHTML = ""
+    })
     
+    newImage();
+
     //Event listeners for user response
     choiceLandfill.addEventListener('click', function() {
         choiceLandfill.classList.remove("apply-shake");
